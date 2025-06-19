@@ -1,21 +1,27 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
-const songSchema = new mongoose.Schema({
-  name: String,
-  artist: String,
-  genre: String,
-  duration: String,
-  url: String,
-  isFavorite: Boolean
+const PlaylistSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    songs: [{
+        deezerId: Number,       // Deezer track ID
+        title: String,
+        artist: String,
+        album: String,
+        duration: Number,       // in seconds
+        cover: String           // album cover URL
+    }],
+    user: {
+        type: String,           // stores username (simplest approach)
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
-const playlistSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  title: String,
-  description: String,
-  songs: [songSchema]
-});
-
-const Playlist = mongoose.model('Playlist', playlistSchema);
-
-export default Playlist;
+module.exports = mongoose.model('Playlist', PlaylistSchema);
