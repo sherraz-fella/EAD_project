@@ -66,3 +66,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* Default (Dark Theme) */
+body.dark-theme {
+  --bg: #121212;
+  --text: #ffffff;
+}
+
+/* Light Theme */
+body.light-theme {
+  --bg: #ffffff;
+  --text: #121212;
+}
+
+/* Apply to body and root container */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
