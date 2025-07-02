@@ -1,0 +1,57 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.login-box {
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  padding: 40px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+}
+
+.kalam-logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0095f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 30px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 9px;
+  margin-bottom: 10px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 9px;
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.or {
+  margin: 20px 0;
+  color: #8e8e8e;
+  font-size: 13px;
+}
+
+.signup-link {
+  font-size: 14px;
+  color: #262626;
+}
